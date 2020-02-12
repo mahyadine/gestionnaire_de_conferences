@@ -1,4 +1,5 @@
 from model.connection import *
+from controller.conf.gestionconf import *
 
 
 class GestionConf():
@@ -13,7 +14,8 @@ class GestionConf():
         
             choix = input("\033[34m\n(p) Souhaitez vous creer une conference.\n(s) Souhaitez vous supprimer une conference.\n(v) Pour visualiser les conferences.\n(q) Pour quitter.\nVotre choix :\033[0m").lower()
             if choix == "p":          
-                pass
+                ajout = CreateConf()
+                ajout.create()
 
             if choix == "s":        
                 pass
