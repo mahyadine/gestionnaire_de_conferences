@@ -1,4 +1,5 @@
 from model.connection import *
+from model.hydra import *
 
 class CreateSpeaker():
 
@@ -23,6 +24,7 @@ class CreateSpeaker():
                                   "(%s, %s, %s, %s)" ,(self.fristname, self.name, self.job, self.description))
         self.choice.connection.commit()
         self.choice.close_connection()
+        print(" Le conferencier a bien etait enregistré ")
 
 
     def delete(self):
@@ -32,5 +34,24 @@ class CreateSpeaker():
         self.choice.cursor.execute("DELETE FROM speaker WHERE speaker_id = %s;", (self.speaker_id,))
         self.choice.connection.commit()
         self.choice.close_connection()
+        print(" Le conferencier a bien etait supprimé ")
+
+    def show(self):
+        """method for show account"""
+        sql = """SELECT * FROM speaker"""
+        self.choice.initialize_connection()
+        self.choice.cursor.execute(sql)
+        test = self.choice.cursor.fetchall()
+        self.choice.close_connection()
+        for key, value in enumerate(test):
+            test[key] = Hydra(value)
+        return test
+
+    def show_conference(self):
+        test = self.show()
+        if test:
+            for i in test:
+                print (i)
+
 
     

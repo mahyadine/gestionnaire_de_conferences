@@ -13,7 +13,7 @@ if __name__=='__main__':
     print("\033[32m\n----------------------------------------\n\033[0m")
     while choix != "q":
        
-        choix = input("\033[33m\n(p) Souhaitez vous gerer les conferenciers.\n(s) Souhaitez vous gerer les conferences.\n(q) Pour quitter.\nVotre choix :\033[0m").lower()
+        choix = input("\033[32m\n(p) Souhaitez vous gerer les conferenciers.\n(s) Souhaitez vous gerer les conferences.\n(q) Pour quitter.\nVotre choix :\033[0m").lower()
         if choix == "p":          
             gestionspeaker = GestionSpeaker()
             gestionspeaker.menu()
