@@ -1,5 +1,6 @@
 from model.connection import *
-from controller.speaker import *
+from controller.conferencier.speaker import *
+from controller.conf.displayconf import *
 
 
 
@@ -19,7 +20,8 @@ if __name__=='__main__':
             gestionspeaker.menu()
 
         if choix == "s":        
-            pass
+            gestionconf = GestionConf()
+            gestionconf.menuconf()
       
         if choix == "q":
             print("A bientôt.")
