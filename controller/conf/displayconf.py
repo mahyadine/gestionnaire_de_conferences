@@ -18,7 +18,8 @@ class GestionConf():
                 ajout.create()
 
             if choix == "s":        
-                pass
+                ajout = CreateConf()
+                ajout.delete()
 
             if choix == "v":
                 pass
