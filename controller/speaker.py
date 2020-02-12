@@ -13,7 +13,7 @@ class GestionSpeaker():
         print("\033[35m\n----------------------------------------\n\033[0m")
         while choix != "q":
         
-            choix = input("\033[34m\n(p) Souhaitez vous creer un conferencier.\n(s) Souhaitez vous supprimer un conferencier.\n(q) Pour quitter.\nVotre choix :\033[0m").lower()
+            choix = input("\033[34m\n(p) Souhaitez vous creer un conferencier.\n(s) Souhaitez vous supprimer un conferencier.\n(v) Pour visualiser les conferenciers.\n(q) Pour quitter.\nVotre choix :\033[0m").lower()
             if choix == "p":          
                 log = CreateSpeaker()
                 log.create()
@@ -21,6 +21,10 @@ class GestionSpeaker():
             if choix == "s":        
                 log = CreateSpeaker()
                 log.delete()
+
+            if choix == "v":
+                log = CreateSpeaker()
+                log.show_conference()
         
             if choix == "q":
                 print("A bientôt.")
