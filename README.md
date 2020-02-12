@@ -1,31 +1,32 @@
-# Python3 : Agenda
-
-Créer un <a href="https://fr.wikipedia.org/wiki/Agenda">agenda personnel</a> en utilisant python3.
-
-# Déroulement 
-
-Développeur freelance, vous avez été contacté par Madame Derieux, médecin généraliste qui a 
-besoin de vos services. Madame Derieux est très occupée entre son métier et ses nombreuses 
-activités. Elle a souvent des difficultés à gérer son agenda et son emploi du temps. Comme tous les 
-scientifiques, elle est tournée vers les nouvelles technologies et voudrait quelque chose de plus 
-performant qu'un agenda papier. Elle voudrait utiliser cette dernière technologie dont tout le monde 
-parle : l'ordinateur ! Votre mission sera donc de lui développer une application pour son terminal qui
-fonctionnera comme un agenda et lui permettra d'organiser son emploi du temps.
-  
+# Python3 : Gestionnaire de conférences
+Créer un gestionnaire de conférences en utilisant python3.
+# Déroulement
+Vous travaillez au service informatique du grand hôtel le Ritz Otto à Paris qui souhaite moderniser
+et améliorer son système d'information car beaucoup de données sont encore conservées en version
+papier. Une grande partie des revenus de l'hôtel provient des événements d'entreprise et notamment
+des conférences organisées dans ses locaux.
+La direction vous a demandé de travailler sur une application qui permettra la gestion du calendrier
+des conférences et des conférenciers intervenant dans les locaux. Cela permettra au personnel
+d'économiser du temps et d'éviter les erreurs d'organisation
 Spécifications fonctionnelles :
-- La page d'accueil affiche la date du jour et le calendrier du mois en cours
-- L'utilisateur peut voir le calendrier du mois suivant et du mois précédent
-- L'utilisateur peut voir tous les événements d'une date précise
-- L'utilisateur peut annuler (supprimer) un événement enregistré dans l'agenda
-- L'utilisateur peut ajouter un événement dans l'agenda
-- L'utilisateur peut modifier les caractéristiques d'un événement déjà enregistré dans l'agenda
-- Deux événements ne peuvent pas avoir lieu le même jour à la même heure
-- Un événement est composé obligatoirement d'un titre, d'une date, d'une heure et éventuellement 
-  d'une description
-
-
+- La page d'accueil demande à l'utilisateur s'il souhaite gérer les conférenciers ou les conférences
+- Depuis l'accueil l'utilisateur peut quitter l'application
+- Sur la page de gestion des conférenciers l'utilisateur peut : créer un conférencier, supprimer un
+  conférencier ou voir tous les conférenciers
+- Un conférencier est composé d'un prénom, d'un nom, d'une description, d'une profession et d'un
+  statut (actif ou non-actif). Par défaut tout nouveau conférencier est considéré comme actif
+- La liste des conférenciers n'affiche que les conférenciers actifs
+- Sur la page de gestion des conférences l'utilisateur peut : créer une conférence, supprimer une
+  conférence ou voir toutes les conférences
+- Une conférence est composée d'un titre, d'un résumé, d'une date, d'une heure, d'une date de
+  création et est obligatoirement associée à un conférencier par son ID
+- Quand on affiche toutes les conférences, on affiche également le prénom et le nom du conférencier
+  associé.
+- La suppression d'une entité (conférence ou conférencier) se fait par son ID uniquement
+- Depuis une page de gestion l'utilisateur peut revenir à la page d'accueil
+- Faire en sorte que si l'on supprime un conférencier alors toutes les conférences qui lui sont
+  associées sont également supprimées.
 # Critères de qualité
-
 Votre agenda devra :
 - Langage Python 3
 - Organisation du code selon le principe MVC
@@ -34,71 +35,15 @@ Votre agenda devra :
 - Essayer de respecter certains des principes SOLID
 - Programme exécutable par le lancement d'un fichier main.py
 - Intégration d'une base de données PostgreSQL via la librairie Psycopg2
-- Utilisation du module Calendar
-
 # Bonus
-
-Vous pouvez, si vous le souhaitez, rajouter des fonctionnalités à votre application comme par 
+Vous pouvez, si vous le souhaitez, rajouter des fonctionnalités à votre application comme par
 exemple :
-- Une vérification stricte des données rentrées par l'utilisateur dans les inputs (validité du format des
-  dates, heures, absence de caractères spéciaux...)
-- Une gestion plus fine de l'expérience utilisateur. Par exemple que se passe-t-il l'utilisateur cherche # Python3 : Agenda
-
-Créer un <a href="https://fr.wikipedia.org/wiki/Agenda">agenda personnel</a> en utilisant python3.
-
-# Déroulement 
-
-Développeur freelance, vous avez été contacté par Madame Derieux, médecin généraliste qui a 
-besoin de vos services. Madame Derieux est très occupée entre son métier et ses nombreuses 
-activités. Elle a souvent des difficultés à gérer son agenda et son emploi du temps. Comme tous les 
-scientifiques, elle est tournée vers les nouvelles technologies et voudrait quelque chose de plus 
-performant qu'un agenda papier. Elle voudrait utiliser cette dernière technologie dont tout le monde 
-parle : l'ordinateur ! Votre mission sera donc de lui développer une application pour son terminal qui
-fonctionnera comme un agenda et lui permettra d'organiser son emploi du temps.
-  
-Spécifications fonctionnelles :
-- La page d'accueil affiche la date du jour et le calendrier du mois en cours
-- L'utilisateur peut voir le calendrier du mois suivant et du mois précédent
-- L'utilisateur peut voir tous les événements d'une date précise
-- L'utilisateur peut annuler (supprimer) un événement enregistré dans l'agenda
-- L'utilisateur peut ajouter un événement dans l'agenda
-- L'utilisateur peut modifier les caractéristiques d'un événement déjà enregistré dans l'agenda
-- Deux événements ne peuvent pas avoir lieu le même jour à la même heure
-- Un événement est composé obligatoirement d'un titre, d'une date, d'une heure et éventuellement 
-  d'une description
-
-
-# Critères de qualité
-
-Votre agenda devra :
-- Langage Python 3
-- Organisation du code selon le principe MVC
-- Usage de la programmation orientée objet
-- Respect du principe DRY
-- Essayer de respecter certains des principes SOLID
-- Programme exécutable par le lancement d'un fichier main.py
-- Intégration d'une base de données PostgreSQL via la librairie Psycopg2
-- Utilisation du module Calendar
-
-# Bonus
-
-Vous pouvez, si vous le souhaitez, rajouter des fonctionnalités à votre application comme par 
-exemple :
-- Une vérification stricte des données rentrées par l'utilisateur dans les inputs (validité du format des
-  dates, heures, absence de caractères spéciaux...)
-- Une gestion plus fine de l'expérience utilisateur. Par exemple que se passe-t-il l'utilisateur cherche 
-  à modifier un événement non-existant ?
-- Transformer votre application en agenda partagé pour plusieurs personnes avec la possibilité de 
-  créer des comptes personnels
-
-# Ressources 
-
-- https://realpython.com/the-model-view-controller-mvc-paradigm-summarized-with-legos/
-
-  à modifier un événement non-existant ?
-- Transformer votre application en agenda partagé pour plusieurs personnes avec la possibilité de 
-  créer des comptes personnels
-
-# Ressources 
-
-- https://realpython.com/the-model-view-controller-mvc-paradigm-summarized-with-legos/
+- Présenter les conférences par ordre chronologique de la plus proche dans le temps à la plus
+  lointaine
+- Mettre en place des messages d'erreur personnalisés pour l'utilisateur lorsqu'il rentre des données
+  invalides
+- Vérifier la validité des inputs utilisateur en s'assurant par exemple qu'ils ne contiennent pas de
+  code ou de caractères spéciaux mais aussi qu'ils respectent les formats demandés
+- Permettre à l'utilisateur de mettre à jour les informations en base de données
+# Ressources
+- https://www.techonthenet.com/sql_server/foreign_keys/foreign_delete.php
