@@ -22,7 +22,8 @@ class GestionConf():
                 ajout.delete()
 
             if choix == "v":
-                pass
+                ajout = CreateConf()
+                ajout.show_conference()
         
             if choix == "q":
                 print("A bientôt.")

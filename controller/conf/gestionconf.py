@@ -1,4 +1,5 @@
 from model.connection import *
+from model.entities import *
 
 class CreateConf():
 
@@ -33,3 +34,20 @@ class CreateConf():
         self.choice.connection.commit()
         self.choice.close_connection()
         print(" Le conference a bien etait supprimé ")
+
+    def show(self):
+        """method for show account"""
+        sql = """SELECT * FROM conf, speaker WHERE speaker_id= speak_id"""
+        self.choice.initialize_connection()
+        self.choice.cursor.execute(sql)
+        test = self.choice.cursor.fetchall()
+        self.choice.close_connection()
+        for key, value in enumerate(test):
+            test[key] = Hydra(value)
+        return test
+
+    def show_conference(self):
+        test = self.show()
+        if test:
+            for i in test:
+                print (i)
